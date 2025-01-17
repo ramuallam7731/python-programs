@@ -1,0 +1,8 @@
+from datetime import datetime 
+ip=input()
+ip_obj=datetime.strptime(ip,"%b %d %Y %I:%M %p")
+remaing_days=datetime(ip_obj.year+1,1,1)-(ip_obj) 
+total_sec=remaing_days.total_seconds()
+hours=int(total_sec//3600) 
+minutes=int((total_sec%3600)//60)
+print(f"{hours} hours {minutes} minutes")
